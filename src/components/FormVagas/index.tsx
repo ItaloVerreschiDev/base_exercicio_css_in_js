@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react'
+import { FormEvent, SetStateAction, useState } from 'react'
 
 import { Form, Input, Button } from './styles'
 
@@ -18,7 +18,7 @@ const FormVagas = ({ aoPesquisar }: Props) => {
     <Form onSubmit={aoEnviarForm}>
       <Input
         placeholder="Front-end, fullstack, node, design"
-        onChange={(e) => setTermo(e.target.value)}
+        onChange={(e: { target: { value: SetStateAction<string> } }) => setTermo(e.target.value)}
         type="search"
       />
       <Button type="submit">Pesquisar</Button>

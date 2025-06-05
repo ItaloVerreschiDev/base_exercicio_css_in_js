@@ -24,6 +24,9 @@ export const Form = styled.form`
 export const FormContainer = styled.div`
   position: relative;
   color: ${(props) => props.theme.textColor};
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 16px;
 `
 
 export const Title = styled.h2`

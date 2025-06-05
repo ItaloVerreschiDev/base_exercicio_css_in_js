@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-export const Form = styled.form`
+export const Form = styled.form.attrs({
+  role: 'search'
+})`
   display: grid;
   grid-template-columns: 1fr auto;
   background-color: ${(props) => props.theme.corSecundaria};
@@ -9,12 +11,16 @@ export const Form = styled.form`
   margin-top: 40px;
 `
 
-export const Input = styled.input`
+export const Input = styled.input.attrs({
+  type: 'search'
+})`
   padding: 0 16px;
   outline-color: ${(props) => props.theme.corPrincipal};
 `
 
-export const Button = styled.button`
+export const Button = styled.button.attrs({
+  type: 'submit'
+})`
   background-color: ${(props) => props.theme.corPrincipal};
   border: 1px solid ${(props) => props.theme.corPrincipal};
   height: 40px;
@@ -24,3 +30,4 @@ export const Button = styled.button`
   margin-left: 8px;
   cursor: pointer;
 `
+
